@@ -449,7 +449,7 @@ default:
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 <script src="assets/bootstrap/js/bootstrap.js"></script>
 
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="assets/js/particles.min.js"></script>
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 
@@ -476,7 +476,7 @@ default:
                 "random": true,
                 "anim": {"enable": false, "speed": 4, "size_min": 0.3, "sync": false}
             },
-            "line_linked": {"enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1},
+            "line_linked": {"enable": false, "distance": 150, "color": "#FFFFFF", "opacity": 0.4, "width": 1},
             "move": {
                 "enable": true,
                 "speed": 1,
