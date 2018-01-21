@@ -1,0 +1,278 @@
+/**
+node-sass --watch public/assets/sass/main.scss public/assets/css/main.css
+ */
+/* ---- reset ---- */
+@import url("https://fonts.googleapis.com/css?family=Dr+Sugiyama|Mr+Bedfort|Rouge+Script|Stalemate");
+@import url("https://fonts.googleapis.com/css?family=Coming+Soon|Quicksand");
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+  background: white !important;
+  /*background-color: #f5f6ff;*/
+  /*height: 200vh;*/
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+canvas {
+  display: block;
+  vertical-align: bottom; }
+
+.nav {
+  z-index: 100; }
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: static;
+  background: white !important;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 50%; }
+
+canvas {
+  position: fixed;
+  z-index: 0;
+  top: 0; }
+
+.container {
+  margin-bottom: 10vh; }
+  .container h2 {
+    font-size: 4em;
+    margin: 50px 0 50px;
+    text-align: center;
+    font-family: 'Coming Soon', cursive;
+    color: #99a5ff !important; }
+
+.container-carousel {
+  padding: 10px;
+  z-index: 10;
+  margin-top: 10vh;
+  margin-bottom: 30vh; }
+  .container-carousel .carousel-item {
+    width: 100%;
+    height: 350px;
+    background-size: contain;
+    background: no-repeat center; }
+
+.carousel {
+  padding: 10px;
+  background: white !important; }
+
+.card {
+  margin: 10px;
+  background: white !important;
+  padding: 10px;
+  height: 400px;
+  z-index: 2;
+  overflow: hidden; }
+  .card h3 {
+    font-family: 'Coming Soon', cursive;
+    color: #99a5ff !important; }
+  .card p {
+    font-family: 'Coming Soon', cursive;
+    font-size: 1.5em; }
+  .card:hover {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.71); }
+    .card:hover img {
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1); }
+  .card .card-img-top {
+    max-height: 150px; }
+  .card .card-title {
+    font-family: 'Coming Soon', cursive;
+    color: #99a5ff !important;
+    font-size: 3em; }
+  .card .card-text {
+    padding: 20px 50px; }
+  .card .card-img {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .card img {
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    .card img:hover {
+      -moz-transform: scale(1.02);
+      -webkit-transform: scale(1.02);
+      transform: scale(1.02); }
+
+.show {
+  background: #001eff !important;
+  /* The Fallback */
+  background: rgba(0, 30, 255, 0.2) !important; }
+  .show .modal-content {
+    border-radius: 0;
+    border: 2px solid white !important;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.71); }
+    .show .modal-content .modal-header {
+      border: none !important; }
+      .show .modal-content .modal-header .modal-title {
+        font-family: 'Mr Bedfort', cursive;
+        font-size: 4em; }
+    .show .modal-content .modal-footer {
+      border: none !important; }
+
+#carouselHome {
+  background: white !important;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.71); }
+
+.content > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.content {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr)); }
+
+.nav-item {
+  cursor: pointer;
+  z-index: 10;
+  background: white !important;
+  color: #99a5ff !important;
+  font-family: 'Coming Soon', cursive;
+  font-size: 1.2em; }
+  .nav-item .dropdown-menu {
+    z-index: 300;
+    left: 10px;
+    background: white !important;
+    border: 2px solid #99a5ff !important;
+    color: #99a5ff !important;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.71); }
+  .nav-item .nav-link {
+    font-size: 2em;
+    border-radius: 5px;
+    margin: 5px;
+    margin-right: 50px;
+    padding: 20px;
+    padding-bottom: 10px;
+    color: #ccd2ff !important;
+    border: 2px solid white !important; }
+    .nav-item .nav-link.active {
+      background: white !important;
+      border: 2px solid #b3bcff !important;
+      color: #b3bcff !important; }
+    .nav-item .nav-link:hover {
+      background: white !important;
+      border: 2px solid #99a5ff !important;
+      color: #99a5ff !important;
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.71); }
+
+.btn-blue {
+  color: white !important;
+  background: #99a5ff !important;
+  border: 2px solid #99a5ff !important; }
+  .btn-blue:hover {
+    background: white !important;
+    color: #99a5ff !important;
+    border: 2px solid #99a5ff !important; }
+
+header {
+  width: 100vw;
+  color: #000c66 !important; }
+  header h1 {
+    font-family: 'Mr Bedfort', cursive;
+    font-size: 7em;
+    text-align: center;
+    margin: 20px 0; }
+    header h1 p {
+      font-family: 'Mr Bedfort', cursive;
+      text-align: left;
+      font-size: 0.5em;
+      margin-left: calc(50vw + 70px); }
+
+footer {
+  position: relative;
+  z-index: 10;
+  bottom: -100px;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 200px;
+  line-height: 60px;
+  /* Vertically center the text there */
+  background: #99a5ff !important; }
+
+.card-3 {
+  margin: 10px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  display: inline-block;
+  cursor: pointer; }
+  .card-3 .card-img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+  .card-3 p {
+    display: none;
+    color: #ffffff !important;
+    font-size: 0.9em;
+    font-family: 'Coming Soon', cursive;
+    text-align: justify;
+    margin: 70px 20%;
+    position: absolute;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold; }
+    .card-3 p span {
+      font-size: 2em;
+      display: block;
+      text-transform: uppercase; }
+  .card-3:hover, .card-3:focus {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.71); }
+    .card-3:hover .card-img, .card-3:focus .card-img {
+      -ms-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      transform: scale(1.5); }
+    .card-3:hover .card-img:before, .card-3:focus .card-img:before {
+      display: block; }
+  .card-3:hover p, .card-3:focus p {
+    display: block; }
+  .card-3 .card-img:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #001eff !important;
+    /* The Fallback */
+    background: rgba(0, 30, 255, 0.2) !important; }
+
+form .form-group label {
+  font-family: 'Coming Soon', cursive;
+  color: #6678ff !important;
+  font-size: 2em; }
+
+form .form-group textarea {
+  height: 190px;
+  font-size: 1.2em;
+  font-family: 'Coming Soon', cursive; }
+
+form .form-group textarea:focus, form .form-group textarea:active, form .form-group input:focus, form .form-group input:active {
+  border: 1px solid #99a5ff !important;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.71); }

@@ -1,0 +1,347 @@
+/**
+node-sass --watch public/assets/sass/main.scss public/assets/css/main.css
+ */
+/* ---- reset ---- */
+@import url('https://fonts.googleapis.com/css?family=Dr+Sugiyama|Mr+Bedfort|Rouge+Script|Stalemate');
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon|Quicksand');
+
+$colorBase: #001eff;
+$colorRGB: '0, 30, 255';
+@import 'patials/mixins';
+
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+  @include back-color-ligthen($colorBase, 100%);
+  /*background-color: #f5f6ff;*/
+  /*height: 200vh;*/
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+.nav {
+  z-index: 100;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: static;
+  @include back-color-ligthen($colorBase, 80%);
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 50%;
+}
+
+canvas {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+}
+
+.container {
+  margin-bottom: 10vh;
+  h2{
+    font-size: 4em;
+    margin: 50px 0 50px;
+    text-align: center;
+    @include font-style('6');
+    @include text-color-ligthen($colorBase, 30%);
+  }
+}
+
+.container-carousel {
+  padding: 10px;
+  z-index: 10;
+  margin-top: 10vh;
+  margin-bottom: 30vh;
+  .carousel-item {
+    width: 100%;
+    height: 350px;
+    background-size: contain;
+    background: no-repeat center;
+
+  }
+
+}
+
+.carousel {
+  padding: 10px;
+  @include back-color-ligthen($colorBase, 100%);
+
+}
+
+.card {
+  h3{
+    @include font-style('6');
+    @include text-color-ligthen($colorBase, 30%);
+  }
+  p{
+    @include font-style('6');
+    font-size: 1.5em;
+  }
+  &:hover {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.71);
+    img {
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  margin: 10px;
+  @include back-color-ligthen($colorBase, 100%);
+  padding: 10px;
+  height: 400px;
+  z-index: 2;
+  overflow: hidden;
+  .card-img-top {
+    max-height: 150px;
+  }
+  .card-title {
+    @include font-style('6');
+    @include text-color-ligthen($colorBase, 30%);
+    font-size: 3em;
+
+  }
+  .card-text {
+    padding: 20px 50px;
+  }
+  .card-img{
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  img {
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    &:hover {
+      -moz-transform: scale(1.02);
+      -webkit-transform: scale(1.02);
+      transform: scale(1.02);
+    }
+  }
+}
+
+.show {
+  @include back-color-opacity($colorBase, 0.2);
+  .modal-content {
+    border-radius: 0;
+    @include border-color-ligthen($colorBase, 2px, 100%, solid);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.71);
+    .modal-header {
+      border: none !important;
+      .modal-title {
+        @include font-style('1');
+        font-size: 4em;
+
+      }
+    }
+    .modal-footer {
+      border: none !important;
+    }
+  }
+}
+
+#carouselHome {
+  @include back-color-ligthen($colorBase, 100%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.71);
+}
+
+.content > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+
+}
+
+.nav-item {
+  cursor: pointer;
+  .dropdown-menu{
+    z-index: 300;
+    left:10px;
+    @include back-color-ligthen($colorBase, 100%);
+    @include border-color-ligthen($colorBase, 2px, 30%, solid);
+    @include text-color-ligthen($colorBase, 30%);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.71);
+  }
+  z-index: 10;
+  @include back-color-ligthen($colorBase, 100%);
+  @include text-color-ligthen($colorBase, 30%);
+  @include font-style('6');
+  font-size: 1.2em;
+  .nav-link {
+    font-size: 2em;
+    border-radius: 5px;
+    margin: 5px;
+    margin-right: 50px;
+    padding: 20px;
+    padding-bottom: 10px;
+    @include text-color-ligthen($colorBase, 40%);
+    @include border-color-ligthen($colorBase, 2px, 100%, solid);
+    &.active {
+      @include back-color-ligthen($colorBase, 100%);
+      @include border-color-ligthen($colorBase, 2px, 35%, solid);
+      @include text-color-ligthen($colorBase, 35%);
+    }
+    &:hover {
+      @include back-color-ligthen($colorBase, 100%);
+      @include border-color-ligthen($colorBase, 2px, 30%, solid);
+      @include text-color-ligthen($colorBase, 30%);
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.71);
+    }
+  }
+}
+
+.btn-blue {
+  @include text-color-ligthen($colorBase, 100%);
+  @include back-color-ligthen($colorBase, 30%);
+  @include border-color-ligthen($colorBase, 2px, 30%, solid);
+  &:hover {
+    @include back-color-ligthen($colorBase, 100%);
+    @include text-color-ligthen($colorBase, 30%);
+    @include border-color-ligthen($colorBase, 2px, 30%, solid);
+  }
+}
+
+header {
+  width: 100vw;
+  @include text-color-darken($colorBase, 30%);
+  h1 {
+    @include font-style('1');
+    font-size: 7em;
+    text-align: center;
+    margin: 20px 0;
+    p {
+      @include font-style('1');
+      text-align: left;
+      font-size: 0.5em;
+      margin-left: calc(50vw + 70px);
+    }
+  }
+}
+
+footer {
+  position: relative;
+  z-index: 10;
+  bottom: -100px;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 200px;
+  line-height: 60px; /* Vertically center the text there */
+  @include back-color-ligthen($colorBase, 30%);
+}
+
+.card-3 {
+
+  margin: 10px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  display: inline-block;
+  cursor: pointer;
+  .card-img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  p {
+
+    display: none;
+    color: #ffffff !important;
+    font-size: 0.9em;
+    @include font-style('6');
+    text-align: justify;
+    margin: 70px 20%;
+    position: absolute;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+
+    span {
+      font-size: 2em;
+      display: block;
+      text-transform: uppercase;
+    }
+  }
+  &:hover, &:focus {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.71);
+    .card-img {
+      -ms-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+    .card-img:before {
+      display: block;
+    }
+  }
+  &:hover p, &:focus p {
+    display: block;
+  }
+  .card-img:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include back-color-opacity($colorBase, 0.2)
+  }
+
+}
+
+form {
+  .form-group {
+    label {
+      @include font-style('6');
+      @include text-color-ligthen($colorBase, 20%);
+      font-size: 2em;
+    }
+    textarea {
+      height: 190px;
+      font-size: 1.2em;
+      @include font-style('6');
+
+    }
+    textarea, input {
+      &:focus, &:active {
+        @include border-color-ligthen($colorBase, 1px, 30%, solid);
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.71);
+
+      }
+    }
+  }
+}

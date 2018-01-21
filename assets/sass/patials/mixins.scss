@@ -1,0 +1,47 @@
+@mixin text-color-opacity($color, $opacity: 0.3) {
+
+  color: rgba($color, $opacity) !important;
+}
+@mixin text-color-ligthen($color,$pourcent) {
+  color:  lighten($color, $pourcent) !important;
+}
+@mixin text-color-darken($color,$pourcent) {
+  color:  darken($color, $pourcent) !important;
+}
+@mixin back-color-opacity($color, $opacity: 0.3) {
+  background: $color !important; /* The Fallback */
+  background: rgba($color, $opacity) !important;
+}
+@mixin back-color-ligthen($color,$pourcent) {
+  background:  lighten($color, $pourcent) !important;
+}
+@mixin back-color-darken($color,$pourcent) {
+  background:  darken($color, $pourcent) !important;
+}
+@mixin border-color-ligthen($color,$pixel,$pourcent, $type:'solid') {
+  border:$pixel $type  lighten($color, $pourcent) !important;
+}
+
+@mixin font-style($num){
+  @if $num == '1'{
+    font-family: 'Mr Bedfort', cursive;
+  }
+  @if $num == '2'{
+    font-family: 'Dr Sugiyama', cursive;
+  }
+  @if $num == '3'{
+    font-family: 'Stalemate', cursive;
+  }
+  @if $num == '4'{
+    font-family: 'Rouge Script', cursive;
+  }
+  @if $num == '5'{
+    font-family: 'Quicksand', sans-serif;
+  }
+  @if $num == '6'{
+    font-family: 'Coming Soon', cursive;
+  }
+
+
+
+}
